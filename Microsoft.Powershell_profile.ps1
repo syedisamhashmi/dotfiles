@@ -21,4 +21,20 @@ Set-Alias -Name code -Value code-insiders.cmd
 #? Useful pattern for prepending things into the path,
 #? as it is uses the first item found in the search.
 $OLD_PATH = $env:PATH;
-$env:PATH = "" + $old_path;
+#? For local user install
+#$env:PATH = "~\AppData\local\Microsoft\dotnet;";
+#? For access to bins in npm
+#$env:PATH += "~\AppData\Roaming\npm;";
+#$env:PATH += $OLD_PATH;
+
+
+# Helper function to kill all chrome and re-run it with debug port enabled.
+#? Where Chrome is installed
+$CHROME_LOCATION = ""      
+function kill-chrome-re-run-with-debug {
+	foreach($id in (ps | Where ProcessName -eq chrome | Select Id))
+	{
+		Stop-Process -Id $id.Id
+	}
+	Start-Process $CHROME_LOCATION --remote-debugging-port=9222
+}
