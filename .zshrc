@@ -11,8 +11,8 @@ export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/
 # If terminal is opened at ~,
 if [[ $PWD == ~ ]]
 then
-    # I prefer to start on my Desktop always
-    cd ~/Desktop
+    # I prefer to start in my user vs folder always
+    cd ~/vs
 fi
 
 
