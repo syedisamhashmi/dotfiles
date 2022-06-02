@@ -1,25 +1,14 @@
 #!/usr/bin/zsh
 
-# Turns ~ into your user dir. For use with zsh
-set -o magicequalsubst
+# ACTION NECESSARY - Set path to repo containing my dotfiles.
+export REPO_PATH="$HOME/vs/dotfiles";
+# ACTION NECESSARY - Set path to proper OS.
+export SPECIFIC_FOLDER="$REPO_PATH/osx";
 
-# Add VS Code `code`
-#export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-# If you are an insider... Like me :)
-export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
-
-# If terminal is opened at ~,
-if [[ $PWD == ~ ]]
-then
-    # I prefer to start in my user vs folder always
-    cd ~/vs
-fi
-
-
-# USAGE - type `profile` to open zshrc profile in VS Code
-alias profile='code ~/.zshrc'
-
-
-
-
-
+# Loads all the split files in the osx folder.
+for file in "${SPECIFIC_FOLDER}/"*.*; do
+  source "${file}"
+done
+unset file
+unset REPO_PATH
+unset SPECIFIC_FOLDER

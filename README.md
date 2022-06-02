@@ -1,2 +1,3 @@
-# PowerShellProfile
-PowerShellProfile + other tools I find handy
+# dotfiles!
+
+zshrc + PowerShellProfile + other tools I find handy
