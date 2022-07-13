@@ -9,7 +9,7 @@ alias tabname=osx_tabname
 # USAGE - type `newtab ["desired_name"] ["command to run"]` to open a new terminal tab, set its name, and run a command
 alias newtab=osx_newtab
 
-# USAGE - type `newtab ["desired_name"] ["command to run"]` to open a new terminal tab, set its name, and run a command
+# USAGE - type `random ["length"]` to generate a random number.
 alias random=osx_random
 
 # USAGE - type `sendsql "query" ` to run a query against localhost sql server.

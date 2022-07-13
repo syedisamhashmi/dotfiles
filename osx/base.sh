@@ -14,5 +14,3 @@ then
     # I prefer to start in my user vs folder always
     cd ~/vs
 fi
-
-
