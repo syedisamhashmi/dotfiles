@@ -41,3 +41,14 @@ osx_send_sql()
 
   sqlcmd -S $SQL_DB_HOST_PARAM -d $SQL_DB_INITIAL_CATALOG_PARAM -U $SQL_DB_USER_ID_PARAM -P $SQL_DB_PASSWORD_PARAM -Q $SQL_QUERY_CONTENT;
 }
+
+osx_run__npmlocal()
+{
+  npm install;
+  npm run local;
+}
+
+osx_run__chrome_debug()
+{
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+}

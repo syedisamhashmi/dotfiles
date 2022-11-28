@@ -15,3 +15,12 @@ alias random=osx_random
 # USAGE - type `sendsql "query" ` to run a query against localhost sql server.
 # ASSUMES ENV_VARS EXIST. CHECK `utils.sh` for more information
 alias send_sql=osx_send_sql_env_vars
+
+# USAGE - `ui` to run the local command in a package.json
+alias ui=osx_run__npmlocal
+
+# USAGE - `chrome` to run the chrome with debugging port 9222 open.
+alias chrome=osx_run__chrome_debug
+
+# USAGE - `testReport` to run a dotnet test command collecting coverage to an lcov file.
+alias testReport='dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=./TEST.lcov.xml'
