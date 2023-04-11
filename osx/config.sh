@@ -13,6 +13,10 @@ osx_install_and_setup()
     # For access to nvm
     brew install nvm
 
+    # Why does apple make things hard.
+    brew install grep
+    brew install gnu-sed
+
     # Set default git branch name to main.
     git config --global init.defaultBranch main
     git config --global user.name "Syed Isam Hashmi"

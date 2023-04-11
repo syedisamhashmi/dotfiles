@@ -8,6 +8,10 @@ set -o magicequalsubst
 # If you are an insider... Like me :)
 export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
 
+# Add gnubin to path, for using gnu grep, sed, etc.
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+
 # If terminal is opened at ~,
 if [[ $PWD == ~ ]]
 then

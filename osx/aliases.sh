@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # USAGE - type `profile` to open zshrc profile in VS Code
-alias profile='code ~/.zshrc'
+alias profile='code ~/vs/dotfiles'
 
 # USAGE - type `tabname ["desired_name"]` to set the terminal tab's name
 alias tabname=osx_tabname
