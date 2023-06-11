@@ -9,7 +9,7 @@ makepkg -f
 sudo pacman -U $(ls | grep tar.zst)
 
 
-file_id=uuidgen | head -c 5
+file_id=$(uuidgen | head -c 5)
 echo "Backing up /etc/mkinitcpio.conf to /etc/mkinitcpio.bkp.$file_id"
 sudo cp /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bkp.$file_id
 
