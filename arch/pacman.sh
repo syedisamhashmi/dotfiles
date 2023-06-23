@@ -6,6 +6,8 @@ sudo pacman -S        \
   core/man            \
   core/mkinitcpio     \
   extra/neofetch      \
+  extra/pulseaudio    \
+  extra/pulsemixer    \
   extra/tree          \
   extra/wget          \
   extra/wimlib        \

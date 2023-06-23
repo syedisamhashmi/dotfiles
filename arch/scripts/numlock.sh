@@ -18,3 +18,4 @@ RemainAfterxit=yes
 WantedBy=multi-user.target" > /etc/systemd/system/numlock.service'
 
 
+sudo systemctl enable numlock

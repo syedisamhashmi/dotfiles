@@ -5,7 +5,7 @@ usage()
   echo 'Usage: '$0 $'[-b <path-to-repo>] [-h]\n\n'; exit 1; 
 }
 
-while getopts ":b:h:" option;
+while getopts ":b:h:c" option;
 do
   case $option in
     b)
@@ -14,6 +14,10 @@ do
       ;;
     h)
       usage
+      ;;
+    c)
+      config_only=true;
+      echo "Only configuring"
       ;;
     *)
       usage
@@ -87,6 +91,11 @@ done
 echo "Popping directory $config_files_directory"
 popd
 echo $'\n'
+
+if [ "$config_only" = true ] ;
+then
+  exit 1;
+fi
 
 #----------------------------------------------
 if ! [ -e "${script_path/pacman.sh}" ];

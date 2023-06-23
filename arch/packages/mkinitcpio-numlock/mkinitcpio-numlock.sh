@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+repos_dir_default=$HOME/repos
+
 pushd $repos_dir_default
 rm -rfd $repos_dir_default/mkinitcpio-numlock
 git clone https://aur.archlinux.org/mkinitcpio-numlock.git
@@ -14,13 +16,12 @@ echo "Backing up /etc/mkinitcpio.conf to /etc/mkinitcpio.bkp.$file_id"
 sudo cp /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bkp.$file_id
 
 echo "Generating new configuration file"
-new_conf_file=$(sudo sh -c \
-  "cat /etc/mkinitcpio.conf | sed 's/modconf kms keyboard/modconf numlock kms keyboard/'" \
-)
+new_conf_file=$(sudo sed 's/modconf kms keyboard/modconf numlock kms keyboard/' "/etc/mkinitcpio.conf")
 
 echo "Writing new configuration file to /etc/mkinitcpio.conf"
-sudo sh -c "echo $new_conf_file > /etc/mkinitcpio.conf"
+echo "${new_conf_file}" | sudo tee /etc/mkinitcpio.conf > /dev/null
 
 echo "Generating new initramfs.img"
 sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs.img
+
 popd
