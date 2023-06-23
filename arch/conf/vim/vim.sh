@@ -3,7 +3,7 @@
 script_directory=$(dirname -- "$0")
 
 echo "Copying .vimrc to $HOME/.vimrc"
-cp $script_directory/.vimrc $HOME/.vimrc
+ln -sf $script_directory/.vimrc $HOME/.vimrc
 
 echo "Creating vim directories..."
 mkdir -p ~/.vim
