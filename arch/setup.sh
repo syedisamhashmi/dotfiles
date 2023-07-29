@@ -80,12 +80,16 @@ pushd $config_files_directory
 config_directories=$(find $PWD -type d | awk -v CURR_DIR="$PWD" '{ if ($0 != CURR_DIR) print $0 }')
 for cfg_directory in $config_directories
 do
-	echo $'\nFound config directory: '$cfg_directory
-	for cfg_script in $cfg_directory/*.sh
-	do
-		echo $'Executing configuration script ' $cfg_script
-		sh $cfg_script
-	done
+  echo $'\nFound config directory: '$cfg_directory
+
+  for cfg_script in $cfg_directory/*.sh
+  do 
+    if [ -e "${cfg_script}" ];
+    then
+  		echo $'Executing configuration script ' $cfg_script
+	  	sh $cfg_script
+    fi
+  done
 done
 
 echo "Popping directory $config_files_directory"

@@ -30,3 +30,6 @@ filetype indent on
 
 " Color
 set background=dark
+
+" Mouse - Use scrollback with mouse scroll
+set mouse=a
