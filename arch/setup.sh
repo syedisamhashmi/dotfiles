@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+popd
 # Prints out the usage of the script
 usage()
 {

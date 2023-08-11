@@ -33,3 +33,6 @@ set background=dark
 
 " Mouse - Use scrollback with mouse scroll
 set mouse=a
+
+packadd nerd_tree
+

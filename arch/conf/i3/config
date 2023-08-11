@@ -185,9 +185,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
 bar {
-        status_command i3status
+  id bar-1
+  output HDMI-0
+  #status_command i3status
+  tray_output none
 }
+
+bar {
+  id bar-0
+  output primary
+  status_command i3status -c ~/.config/i3status/config
+  tray_padding 10 px
+  tray_output primary
+  font -*-iosevka-*-*-*-*-*-120-*-*-*-*-*-*
+}
+
 
 
 exec_always --no-startup-id $HOME/repos/dotfiles/arch/conf/lightdm/monitor_layout_default.sh

@@ -2,13 +2,21 @@
 
 script_directory=$(dirname -- "$0")
 
-echo "Copying .vimrc to $HOME/.vimrc"
-ln -sf $script_directory/.vimrc $HOME/.vimrc
+echo "Linking .vimrc to $HOME/.vimrc"
+ln -s -f $script_directory/.vimrc $HOME/.vimrc
 
-echo "Creating vim directories..."
-mkdir -p ~/.vim
-mkdir -p ~/.vim/autoload
-mkdir -p ~/.vim/backup 
-mkdir -p ~/.vim/colors 
-mkdir -p ~/.vim/plugged
-mkdir -p ~/.vim/backup 
+echo "Making vim directories..."
+
+mkdir -p $HOME/.vim/pack/vendor/opt
+
+
+plugin_directory=$script_directory/plugins
+
+echo "Adding plugins from: $plugin_directory"
+for plugin_script in $plugin_directory/*.sh
+do
+  echo $'Executing plugin script ' $plugin_script
+  sh $plugin_script
+done
+
+echo $'\n'
