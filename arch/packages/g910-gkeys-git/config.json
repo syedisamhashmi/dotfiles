@@ -1,0 +1,121 @@
+{
+    "__comment": "following hotkey types are supported: nothing, typeout, shortcut, run and python; only en, fr, de and si keyboard mappings are currently supported",
+    "keyboard_mapping": "en",
+    "profiles": {
+        "m1": {
+            "g1": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g2": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g3": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g4": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g5": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g6": {
+                "hotkey_type": "run",
+                "do": "su prosdkr -c 'DISPLAY=:0 nohup firefox' & 2>&1 > /dev/null"
+            },
+            "g7": {
+                "hotkey_type": "run",
+                "do": "su prosdkr -c 'DISPLAY=:0 nohup gscreenshot -s  -f ~/Pictures/' & 2>&1 > /dev/null"
+            },
+            "g8": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g9": {
+                "hotkey_type": "nothing",
+                "do": ""
+            }
+        },
+        "m2": {
+            "g1": {
+                "hotkey_type": "typeout",
+                "do": "Its WORKING!!!"
+            },
+            "g2": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g3": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g4": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g5": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g6": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g7": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g8": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g9": {
+                "hotkey_type": "nothing",
+                "do": ""
+            }
+        },
+        "m3": {
+            "g1": {
+                "hotkey_type": "typeout",
+                "do": "Its WORKING!!!"
+            },
+            "g2": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g3": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g4": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g5": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g6": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g7": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g8": {
+                "hotkey_type": "nothing",
+                "do": ""
+            },
+            "g9": {
+                "hotkey_type": "nothing",
+                "do": ""
+            }
+        },
+        "mr": {}
+    }
+}

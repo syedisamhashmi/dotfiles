@@ -16,6 +16,9 @@ echo "Backing up /etc/mkinitcpio.conf to /etc/mkinitcpio.bkp.$file_id"
 sudo cp /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bkp.$file_id
 
 echo "Generating new configuration file"
+
+#MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm uinput) 
+
 new_conf_file=$(sudo sed 's/modconf kms keyboard/modconf numlock kms keyboard/' "/etc/mkinitcpio.conf")
 
 echo "Writing new configuration file to /etc/mkinitcpio.conf"
