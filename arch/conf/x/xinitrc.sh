@@ -14,3 +14,8 @@ then
 fi
 echo "Copying screen_layout_default.sh to $HOME/.screenlayout/screen_layout_default.sh"
 ln -sf $script_directory/screen_layout_default.sh $HOME/.screenlayout/screen_layout_default.sh
+
+
+echo $'Linking .xprofile to $HOME/.xprofile\n'
+ln -sf $script_directory/.xprofile $HOME/.xprofile
+
