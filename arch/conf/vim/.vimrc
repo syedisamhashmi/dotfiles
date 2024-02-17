@@ -4,6 +4,9 @@ set shiftwidth=2
 set smartindent
 set autoindent
 
+" To copy to system clipboard
+set clipboard=unnamedplus
+
 " Display a line under the current line.
 set cursorline
 

@@ -1,10 +1,11 @@
 *.background: #000000
 *.foreground: #00ff40 
 
-*.font: xft:Iosevka:style=Regular:size=12
-*.boldFond: xft:Iosevka:style=Bold:size=12
-*.italicFont: xft:Iosevka:style=Italic:size=12
-*.boldItalicFont: xft:Iosevka:style=Bold Italic:size=12
+*.font: xft:Iosevka:style=Regular:size=20
+*faceName: xft:Iosevka:style=Regular:size=20
+*.boldFont: xft:Iosevka:style=Bold:size=20
+*.italicFont: xft:Iosevka:style=Italic:size=20
+*.boldItalicFont: xft:Iosevka:style=Bold Italic:size=20
 
 !! URxvt
 URxvt.letterSpace: 0

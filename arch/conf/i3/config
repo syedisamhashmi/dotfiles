@@ -17,7 +17,9 @@ font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8 
+
+font xft:Iosevka:style=Regular 14
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -55,7 +57,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -fn "xft:Iosevka:style=Regular:size=20" 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -185,24 +187,28 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-
 bar {
-  id bar-1
+ id bar-1
   output HDMI-0
   #status_command i3status
-  tray_output none
+  tray_output primary
 }
 
 bar {
   id bar-0
   output primary
-  status_command i3status -c ~/.config/i3status/config
-  tray_padding 10 px
+  output DP1
+  status_command i3status
+  #status_command i3status -c ~/.config/i3status/config
   tray_output primary
-  font -*-iosevka-*-*-*-*-*-120-*-*-*-*-*-*
+  mode dock 
 }
 
 
-
+exec_always --no-startup-id xsetroot -solid "#000000"
 exec_always --no-startup-id $HOME/repos/dotfiles/arch/conf/lightdm/monitor_layout_default.sh
-exec_always --no-startup-id numlockx on 
+exec_always --no-startup-id numlockx on
+
+
+for_window [title=".* \(DEBUG\)"] floating enable
+#for_window [instance="Godot_Editor"] floating disable

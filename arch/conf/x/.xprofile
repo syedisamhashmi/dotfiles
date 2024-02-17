@@ -1,0 +1,9 @@
+export PATH="/home/prosdkr/repos/aseprite/build/bin/:$PATH"
+export PATH="/home/prosdkr/Desktop/:$PATH"
+
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]];
+then
+  ([[ -f ~/.Xresources ]] && xrdb -load ~/.Xresources) &
+  . startx
+  logout
+fi
