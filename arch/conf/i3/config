@@ -19,7 +19,7 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8 
 
-font xft:Iosevka:style=Regular 14
+font xft:Iosevka:style=Regular 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -192,6 +192,7 @@ bar {
   output HDMI-0
   #status_command i3status
   tray_output primary
+  font xft:Iosevka:style=Regular 12
 }
 
 bar {
@@ -202,6 +203,7 @@ bar {
   #status_command i3status -c ~/.config/i3status/config
   tray_output primary
   mode dock 
+  font xft:Iosevka:style=Regular 12
 }
 
 
