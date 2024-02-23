@@ -6,6 +6,7 @@ sudo pacman -S                \
   core/man                    \
   core/mkinitcpio             \
   extra/arandr                \
+  extra/bat                   \
   extra/bluez                 \
   extra/bluez-utils           \
   extra/neofetch              \
