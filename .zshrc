@@ -9,6 +9,9 @@ export SPECIFIC_OS_FOLDER="$REPO_PATH/osx";
 for file in "${SPECIFIC_OS_FOLDER}/"*.*; do
   source "${file}"
 done
+
+osx_configure
+
 unset file
 unset REPO_PATH
 unset SPECIFIC_OS_FOLDER

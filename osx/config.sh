@@ -20,4 +20,13 @@ osx_install_and_setup()
     # Set default git branch name to main.
     git config --global init.defaultBranch main
     git config --global user.name "Syed Isam Hashmi"
+
+    # Bat printing
+    brew install bat
+}
+
+osx_configure()
+{
+    source $REPO_PATH/config/colors.sh
+    export BAT_PAGER=
 }

@@ -24,3 +24,12 @@ alias chrome=osx_run__chrome_debug
 
 # USAGE - `testReport` to run a dotnet test command collecting coverage to an lcov file.
 alias testReport='dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=./TEST.lcov.xml'
+
+# USAGE - `sonar` to run sonar in a dotnet project against a local running sonar docker image.
+alias sonar=osx_sonar;
+
+# USAGE - `cat` to cat a file using `bat`
+alias cat='bat'
+
+# USAGE - `grep` to grep a file with color
+alias grep="grep --color=always"
